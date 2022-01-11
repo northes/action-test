@@ -19,6 +19,7 @@ jobs: # 主体字段，表示执行的一项或多项任务
         run: | # 运行命令
           echo Hello $NAME
   my_second_job:
+    name: My second job
     needs: [ my_first_job ] # 规定当前任务的依赖关系，即运行顺序。my_second_job 需要在 my_first_job 之后运行
     runs-on: ubuntu-latest
     steps:

@@ -4,10 +4,6 @@ import (
 	"fmt"
 )
 
-func main() {
-
-}
-
 func IsEven(i int) bool {
 	fmt.Println(i % 2)
 	if i%2 == 0 {

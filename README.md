@@ -1,0 +1,1 @@
+[![Go](https://github.com/northes/action-test/actions/workflows/go.yml/badge.svg?branch=dev)](https://github.com/northes/action-test/actions/workflows/go.yml)

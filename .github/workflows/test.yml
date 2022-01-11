@@ -1,21 +1,27 @@
-name: Test
+name: Test # workflow 名
 #on: [push,pull_request] # 在哪些动作下触发本workflow
-on:
-  push:
-    branches:
+on: # 也可以写成这样
+  push: # 指定触发事件
+    branches: # 分支
       - main
-  pull_request: null
+  pull_request: null # 指定所有的拉取请求都触发
 
 jobs: # 主体字段，表示执行的一项或多项任务
-  my_fitst_job: # job id
+  my_first_job: # job id
     name: My first job # 任务说明
     runs-on: ubuntu-latest # 指定运行所需要的虚拟机环境，必填字段
-    steps:
-      - name: print a greeting
-        env:
+    env: # 当前job的环境变量
+      MODE: dev
+    steps: # 指定每个 job 的运行步骤，可以有一个或多个
+      - name: print a greeting # 步骤名称
+        env: # 当前步骤的环境变量
           NAME: northes
-        run: |
+        run: | # 运行命令
           echo Hello $NAME
-#  my_second_job:
-#    needs: [ my_fitst_job ] # 规定当前任务的依赖关系，即运行顺序
-#    runs-on: ubuntu-latest
+  my_second_job:
+    needs: [ my_first_job ] # 规定当前任务的依赖关系，即运行顺序。my_second_job 需要在 my_first_job 之后运行
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: |
+          echo This is second job

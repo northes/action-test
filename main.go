@@ -1,14 +1,17 @@
 package main
 
-import "errors"
+import (
+	"fmt"
+)
 
 func main() {
-
+	fmt.Println("hello")
 }
 
-func Generate(i int) error {
+func IsEven(i int) bool {
+	fmt.Println(i % 2)
 	if i%2 == 0 {
-		return errors.New("oh no")
+		return true
 	}
-	return nil
+	return false
 }

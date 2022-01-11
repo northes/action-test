@@ -4,14 +4,19 @@ on:
 
 jobs:
   build:
+    name: build & test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2 # 使用官方提供actions签出仓库
-      - name: set up
+      - name: Checkout Repo
+        uses: actions/checkout@v2 # 使用官方提供actions签出仓库
+
+      - name: Set up Go
         uses: actions/setup-go@v2 # 使用官方的actions初始化go环境
         with:
           go-version: 1.16 # 指定go版本
-      - name: build
+
+      - name: Build
         run: go build -v ./... # -v 打印构建出来的文件名
-      - name: test
+
+      - name: Test
         run: go test -v ./...

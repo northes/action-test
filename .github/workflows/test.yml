@@ -1,0 +1,21 @@
+name: GitHub Action Test
+#on: [push,pull_request] # 在哪些动作下触发本workflow
+on:
+  push:
+    branches:
+      - main
+  pull_request: null
+
+jobs: # 主体字段，表示执行的一项或多项任务
+  my_fitst_job: # job id
+    name: My first job # 任务说明
+    runs-on: ubuntu-latest # 指定运行所需要的虚拟机环境，必填字段
+    steps:
+      - name: print a greeting
+        env:
+          NAME: northes
+        run: |
+          echo Hello $NAME
+  my_second_job:
+    needs: [ my_fitst_job ] # 规定当前任务的依赖关系，即运行顺序
+    runs-on: ubuntu-latest

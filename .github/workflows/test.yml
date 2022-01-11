@@ -1,4 +1,4 @@
-name: GitHub Action Test
+name: Test
 #on: [push,pull_request] # 在哪些动作下触发本workflow
 on:
   push:

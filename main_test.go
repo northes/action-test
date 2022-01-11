@@ -4,6 +4,10 @@ import (
 	"testing"
 )
 
+func TestName(t *testing.T) {
+	main()
+}
+
 func TestIsEven(t *testing.T) {
 	type args struct {
 		i int

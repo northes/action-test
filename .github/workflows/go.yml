@@ -19,7 +19,8 @@ jobs:
         run: go build -v ./... # -v 打印构建出来的文件名
 
       - name: Test
-        run: go test -v ./...
+#        run: go test -v ./...
+        run: go test -v -race -covermode=atomic -coverprofile=coverage.out ./... # 生成覆盖率测试报告，用以上传codecov
 
       - name: Codecov
         uses: codecov/codecov-action@v2.1.0

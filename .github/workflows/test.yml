@@ -16,6 +16,6 @@ jobs: # 主体字段，表示执行的一项或多项任务
           NAME: northes
         run: |
           echo Hello $NAME
-  my_second_job:
-    needs: [ my_fitst_job ] # 规定当前任务的依赖关系，即运行顺序
-    runs-on: ubuntu-latest
+#  my_second_job:
+#    needs: [ my_fitst_job ] # 规定当前任务的依赖关系，即运行顺序
+#    runs-on: ubuntu-latest

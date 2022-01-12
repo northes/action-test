@@ -23,6 +23,6 @@ jobs:
         run: go test -v -race -covermode=atomic -coverprofile=coverage.out ./... # 生成覆盖率测试报告，用以上传codecov
 
       - name: Codecov
-        uses: codecov/codecov-action@v2.1.0
+        uses: codecov/codecov-action@v2.1.0 # 上报测试覆盖率，需在 https://about.codecov.io/ 注册账号并在GitHub设置secrets
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

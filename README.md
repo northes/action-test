@@ -1,3 +1,5 @@
 [![Go](https://github.com/northes/action-test/actions/workflows/go.yml/badge.svg?branch=dev)](https://github.com/northes/action-test/actions/workflows/go.yml)
-
+[![Go Reference](https://pkg.go.dev/badge/github.com/northes/action-test.svg)](https://pkg.go.dev/github.com/northes/action-test)
 [![codecov](https://codecov.io/gh/northes/action-test/branch/main/graph/badge.svg?token=TN33IN4UGZ)](https://codecov.io/gh/northes/action-test)
+[![Go Report Card](https://goreportcard.com/badge/github.com/northes/action-test)](https://goreportcard.com/report/github.com/northes/action-test)
+![GitHub](https://img.shields.io/github/license/northes/action-test)
